@@ -7,8 +7,8 @@ class Board:
     # TODO HARRY
     # Please add in-line comments describing this class and it's properties/functions
 
-    def __init__(self, w, h):
-        self.width, self.height = w, h
+    def __init__(self):
+        self.width, self.height = 3, 3
 
     def displayBoard(self):        
         pass
@@ -49,7 +49,7 @@ class Player:
 
 if __name__ == "__main__":
 
-    board = Board(3, 3)
+    board = Board()
     susan = Player('Susan','X')
     bob = Player('Bob','O')
     game = Game(bob, susan, board) 
