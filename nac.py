@@ -9,26 +9,12 @@ class Board:
 
     def __init__(self):
         self.width, self.height = 3, 3
-        self.grid = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-
 
     def displayBoard(self):        
-        print(self.grid[0], "|", self.grid[1], "|", self.grid[2])
-        print("---------")
-        print(self.grid[3], "|", self.grid[4], "|", self.grid[5])
-        print("---------")
-        print(self.grid[6], "|", self.grid[7], "|", self.grid[8])
-        print ("\n ============================================================================")
+        pass
 
-
-    def setGrid(self, counter, index):
-        self.grid[index] = counter
-    def getGrid(self, index):
-        return(self.grid[index])
-        
     def clearBoard(self):
-        #reset grid
-        self.grid = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        pass
 
 
 class Game:
@@ -55,17 +41,15 @@ class Player:
         self.counter = counter
 
     def playCounter(self, position):
-        # position comes in as 1..9 (top left, across in rows)
+        Board.setGrid(self.counter, position)    
         pass
         
 
 # some test code...
 
 if __name__ == "__main__":
-  
-    board = Board()
-    board.displayBoard()
 
+    board = Board()
     susan = Player('Susan','X')
     bob = Player('Bob','O')
     game = Game(bob, susan, board) 
@@ -77,8 +61,3 @@ if __name__ == "__main__":
     bob.playCounter(5)
     game.board.displayBoard()
     game.checkWinner()
-    
-    
-    
-
-
