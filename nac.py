@@ -26,6 +26,12 @@ class Game:
         self.board = board
 
     def newGame(self):
+        board.clearBoard()
+        name1 = Player(input("Enter the name:") ,"X")
+        name2 = Player(inout("Enter other name:"), "O")
+        game = Game(name1,name2,board)
+        
+
         pass
 
     def checkWinner(self):
@@ -52,7 +58,7 @@ if __name__ == "__main__":
     board = Board(3, 3)
     susan = Player('Susan','X')
     bob = Player('Bob','O')
-    game = Game(bob, susan, board) 
+    game = Game(bob, susan, board)
 
     game.board.clearBoard()
     susan.playCounter(1)
