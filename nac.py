@@ -30,8 +30,33 @@ class Game:
 
     def checkWinner(self):
         # TODO Alex Bell
-        # return A, B or DRAW
-        pass
+        """
+
+        returns (boolean for if the game has been won, counter which won)
+
+        """
+        grd = self.board.grid
+        for i in range(1,7,3)
+            if grd[i] == grd[i+1]:
+                if grd[i] == grd[i+2]:
+                    return True, grd[i]
+
+        for j in range(1,3):
+            if grd[j] == grd[j+3]:
+                if grd[j] == grd[j+6]:
+                    return True, grd[j]
+
+        if grd[1] == grd[5]:
+            if grd[1] == grd[9]:
+                return True, grd[1]
+
+        if grd[3] == grd[5]:
+            if grd[3] == grd[7]:
+                return True, grd[3]
+
+        return False, ' '
+        # return 'x', 'o', ' '
+        
 
 class Player:
     # TODO ALEX DOWELL
