@@ -11,6 +11,7 @@ class Board:
         self.width, self.height = 3, 3
         self.grid = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
+
     def displayBoard(self):        
         print(self.grid[0], "|", self.grid[1], "|", self.grid[2])
         print("---------")
@@ -61,9 +62,10 @@ class Player:
 # some test code...
 
 if __name__ == "__main__":
-    
+  
     board = Board()
     board.displayBoard()
+
     susan = Player('Susan','X')
     bob = Player('Bob','O')
     game = Game(bob, susan, board) 
